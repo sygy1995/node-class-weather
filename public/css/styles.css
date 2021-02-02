@@ -1,0 +1,48 @@
+body {
+    color: #333333;
+    font-family: arial;
+    max-width: 650px;
+    
+    /* margin is spases insede of the content box top&bottom/left&right */
+    margin: 0 auto;
+    /* margin is spases outsede of the content box top&bottom/left&right */
+    padding: 0 16px;
+    /* fles box*/
+    display: flex;
+    flex-direction: column;
+    /* 100% of the viewbox height */
+    min-height: 100vh
+}
+
+.main-content {
+    /* main content should take up all leftover space */
+    flex-grow: 1;
+}
+
+footer {
+    color: #888888;
+    border-top: 1px solid #eeeeee;
+    margin-top: 16px;
+    padding: 16px 0;
+}
+
+header {
+    margin-top: 16px;
+    margin-bottom: 48px;
+}
+
+h1 {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+/* a of header */
+header a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.portrait {
+    width: 250px;
+}
