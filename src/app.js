@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast');
 
 const app = express();
 // heroku port
+// push to heroku git push heroku HEAD:master
 const port = process.env.PORT || 3000;
 
 // current directory and current file in __dirname and __filename
@@ -61,7 +62,7 @@ app.get('/weather', (req, res)=> {
                 if (error){
                     return res.send({error});
                 }
-                forecast(latitude, longitude, (error,  {weather, temperature, feels_like} = {}) => {
+                forecast(latitude, longitude, (error,  {weather, temperature, feels_like, humidity} = {}) => {
                     if (error) {
                         return res.send({error});
                     }
@@ -69,7 +70,8 @@ app.get('/weather', (req, res)=> {
                         location,
                         weather,
                         temperature,
-                        feels_like
+                        feels_like,
+                        humidity
                     });
                 });
             });

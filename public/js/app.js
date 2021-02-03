@@ -12,7 +12,8 @@ weatherForm.addEventListener('submit', (event) => {
             if (data.error) {
                 message.textContent = data.error;
             } else {
-                const weather = "Weather at "+data.location+" is "+data.weather+". The temperature is "+data.temperature+" degrees and feels lile "+data.feels_like+" degrees."
+                const weather = "Weather at "+data.location+" is "+data.weather+". The temperature is "+data.temperature+" degrees and feels lile "+data.feels_like+" degrees."+ 
+                " The humidity is "+data.humidity+"%.";
                 message.textContent = weather;
             }
             
